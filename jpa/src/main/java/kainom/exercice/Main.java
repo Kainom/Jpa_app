@@ -12,9 +12,6 @@ public class Main {
             EntityManager em = emf.createEntityManager();
             Product product = new Product("The first spear ",2500d);
 
-            em.getTransaction().begin();
-            em.persist(product);
-            em.getTransaction().commit();
             em.close();
             emf.close();
         }catch (Exception err){
