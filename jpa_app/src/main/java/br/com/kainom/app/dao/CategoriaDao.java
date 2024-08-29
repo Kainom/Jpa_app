@@ -1,32 +1,32 @@
 package br.com.kainom.app.dao;
 
-import br.com.kainom.app.entity.Cardapio;
+import br.com.kainom.app.entity.Categoria;
 
 import javax.persistence.EntityManager;
 
-public class Categoria {
+public class CategoriaDao {
     private EntityManager entityManager;
 
 
-    public Categoria(EntityManager entityManager){
+    public CategoriaDao(EntityManager entityManager){
         this.entityManager = entityManager;
     }
 
 
-    public  void cadastrar(Cardapio cardapio){
-        this.entityManager.persist(cardapio);
+    public  void cadastrar(Categoria categoria){
+        this.entityManager.persist(categoria);
     }
 
-    public Cardapio consultar (Integer id){
-       return  this.entityManager.find(Cardapio.class,id);
+    public Categoria consultar (Integer id){
+       return  this.entityManager.find(Categoria.class,id);
     }
 
-    public void atualizar(Cardapio cardapio){
-        this.entityManager.merge(cardapio);
+    public void atualizar(Categoria categoria){
+        this.entityManager.merge(categoria);
     }
 
-    public void deletar(Cardapio cardapio){
-        this.entityManager.remove(cardapio);
+    public void deletar(Categoria categoria){
+        this.entityManager.remove(categoria);
     }
 
 }

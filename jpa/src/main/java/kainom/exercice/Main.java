@@ -10,7 +10,9 @@ public class Main {
         try {
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
             EntityManager em = emf.createEntityManager();
-            Product product = new Product("The first spear ",2500d);
+
+            Product product = em.find(Product.class, 2L);
+            System.out.println(product.getName());
 
             em.close();
             emf.close();

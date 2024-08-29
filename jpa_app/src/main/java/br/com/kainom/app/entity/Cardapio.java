@@ -2,12 +2,12 @@ package br.com.kainom.app.entity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import br.com.kainom.app.entity.*;
 
 @Entity
-@Table(name="pratos")
-public class Prato {
+@Table(name="cardapio")
+public class Cardapio {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -16,11 +16,31 @@ public class Prato {
     private String descricao;
     private Boolean disponivel ;
     private BigDecimal valor;
+
+
+    @ManyToOne
+    private Categoria categoria;
+
+    @Column(name = "data_de_registro")
     private LocalDateTime dataDeRegistro = LocalDateTime.now();
 
-    public Prato() {
+    public Cardapio() {
 
     }
+
+    public  Cardapio(String nome){
+        this.nome = nome;
+    }
+
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
 
     public Integer getId() {
         return id;
@@ -71,18 +91,17 @@ public class Prato {
         this.dataDeRegistro = dataDeRegistro;
     }
 
+
     @Override
-    public String   toString() {
-        return "Prato{" +
+    public String toString() {
+        return "Cardapio{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", disponivel=" + disponivel +
                 ", valor=" + valor +
+                ", categoria=" + categoria +
                 ", dataDeRegistro=" + dataDeRegistro +
                 '}';
     }
-
-
-
 }
