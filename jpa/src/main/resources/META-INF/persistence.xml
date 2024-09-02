@@ -6,6 +6,7 @@
 
     <persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
     <class>basic.model.Product</class>
+
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost/store" /> <!-- BD Mane -->
