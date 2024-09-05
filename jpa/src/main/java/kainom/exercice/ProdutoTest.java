@@ -1,23 +1,22 @@
 package kainom.exercice;
 
-import basic.model.Product;
+import basic.model.Produto;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class RemoveProduct {
-
+public class ProdutoTest {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa");
         EntityManager em = emf.createEntityManager();
-        Product product =  em.find(Product.class,8);
-        if(product != null){
-            em.getTransaction().begin();
-            em.remove(product);
+        em.getTransaction().begin();
+
+        Produto produto = new Produto(12122.00,"The dark sword");
+        em.persist(produto);
         em.getTransaction().commit();
-        }
+        em.close();
         emf.close();
 
-    }
 
+    }
 }
