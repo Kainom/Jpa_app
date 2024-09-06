@@ -61,7 +61,7 @@ public class Dao<E> {
     }
 
     public List<E> getAll(){
-        return this.getAll(0,0);
+        return this.getAll(10,0);
     }
 
     public void close(){
