@@ -9,13 +9,13 @@ import java.util.List;
 
 public class Dao<E> {
     private static EntityManagerFactory emf;
-    private EntityManager em;
-    private Class<E> classe;
+    private final EntityManager em;
+    private final Class<E> classe;
     static {
         try{
             emf = Persistence.createEntityManagerFactory("jpa");
         } catch (Exception e){
-            e.printStackTrace();
+            System.out.println(String.valueOf(e));
         }
     }
 
