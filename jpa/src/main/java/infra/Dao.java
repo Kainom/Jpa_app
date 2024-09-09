@@ -47,6 +47,9 @@ public class Dao<E> {
     public Dao<E> includeAtomic(E entity){
         return  this.openTransaction().include(entity).closeTransaction();
     }
+    public E getById(Long id){
+        return em.find(this.classe,id);
+    }
 
     public List<E> getAll(int qtd, int  displ){
         if(classe == null){

@@ -10,6 +10,9 @@ public class Assento {
     private Long id;
     private String local;
 
+    @OneToOne(mappedBy = "assento")
+    private Cliente cliente;
+
     public Assento(){
         super();
     }
@@ -18,4 +21,23 @@ public class Assento {
         super();
         this.local = local;
     }
+
+    public String getLocal() {
+        return local;
+    }
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+    public Long getId() {
+        return id;
+    }
+
+
 }
