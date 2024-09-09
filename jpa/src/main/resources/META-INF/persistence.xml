@@ -7,6 +7,8 @@
     <persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
     <class>basic.model.Product</class>
      <class>basic.model.Produto</class>
+        <class>one_to_one.Cliente</class>
+        <class>one_to_one.Assento</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
