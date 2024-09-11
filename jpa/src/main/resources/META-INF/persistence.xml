@@ -9,6 +9,8 @@
      <class>basic.model.Produto</class>
         <class>one_to_one.Cliente</class>
         <class>one_to_one.Assento</class>
+        <class>one_to_many.Pedido</class>
+        <class>one_to_many.ItemPedido</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
