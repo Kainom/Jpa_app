@@ -11,7 +11,7 @@ public class ItemPedido {
     @Column(name="id_item_pedido",nullable = false,unique = true)
     private  Long id;
 
-    @ManyToOne
+    @ManyToOne()
     private Pedido pedido;
     @ManyToOne
     private Produto produto;
