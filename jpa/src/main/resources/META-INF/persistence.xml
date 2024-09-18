@@ -11,6 +11,8 @@
         <class>one_to_one.Assento</class>
         <class>one_to_many.Pedido</class>
         <class>one_to_many.ItemPedido</class>
+        <class>many_to_many.Tio</class>
+        <class>many_to_many.Sobrinho</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
