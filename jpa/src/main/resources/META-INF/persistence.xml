@@ -5,6 +5,7 @@
              version="2.1">
 
     <persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
+       <mapping-file>META-INF/consulta.xml</mapping-file>
     <class>basic.model.Product</class>
      <class>basic.model.Produto</class>
         <class>one_to_one.Cliente</class>

@@ -19,6 +19,8 @@ public class NovoMovieAtor {
 
         Dao<Movie> dao = new Dao<>();
         dao.includeAtomic(movie);
+        dao.close();
+
 
     }
 }
