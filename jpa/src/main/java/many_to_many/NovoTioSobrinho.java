@@ -24,7 +24,7 @@ public class NovoTioSobrinho {
         tia.getSobrinhos().add(sobrinha);
         sobrinha.getTios().add(tia);
 
-        Dao<Object> dao = new \Dao<>();
+        Dao<Object> dao = new Dao<>();
         dao.openTransaction().include(tio).include(tia).include(sobrinho).include(sobrinha).closeTransaction().close();
 
     }
