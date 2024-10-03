@@ -16,6 +16,10 @@
         <class>many_to_many.Sobrinho</class>
         <class>many_to_many.Movie</class>
         <class>many_to_many.Ator</class>
+        <class>composicao.Endereco</class>
+        <class>composicao.Fornecedor</class>
+        <class>composicao.Funcionario</class>
+
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
