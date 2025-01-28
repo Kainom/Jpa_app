@@ -19,7 +19,11 @@
         <class>composicao.Endereco</class>
         <class>composicao.Fornecedor</class>
         <class>composicao.Funcionario</class>
-
+        <class>inheritance.Car</class>
+        <class>inheritance.Vehicle</class>
+        <class>inheritance.MotoCycle</class>
+        <class>inheritance.Aluno</class>
+        <class>inheritance.AlunoBolsista</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
